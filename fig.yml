@@ -10,7 +10,7 @@ web:
   working_dir: ./app
   ports:
     - "3007:3007"
-  command: iojs --harmony_arrow_functions index.js
+  command: iojs --harmony_arrow_functions server/server.js
   links:
     - db
   environment:
