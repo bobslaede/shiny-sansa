@@ -2,5 +2,12 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "shiny": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "shiny",
+    "name": "shiny",
+    "connector": "mongodb"
   }
 }

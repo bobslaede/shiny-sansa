@@ -25,5 +25,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "user": {
+    "dataSource": "shiny",
+    "public": false
+  },
+  "organization": {
+    "dataSource": "shiny",
+    "public": false
+  },
+  "client": {
+    "dataSource": "shiny",
+    "public": true
   }
 }
