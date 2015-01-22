@@ -1,7 +1,9 @@
 db:
   image: dockerfile/mongodb
+  volumes:
+    - "./mongodata:/data/db"
   ports:
-    - 27017
+    - "27018:27017"
 
 web:
   build: .
@@ -10,9 +12,11 @@ web:
   working_dir: ./app
   ports:
     - "3007:3007"
-  command: iojs --harmony_arrow_functions server/server.js
+    - "5959:5858"
+  command: iojs --harmony_arrow_functions --debug server/server.js
   links:
     - db
   environment:
     PORT: 3007
     DB: 27017
+    DEBUG: "loopback:user"

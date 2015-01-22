@@ -8,34 +8,30 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongo"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
-  "user": {
-    "dataSource": "shiny",
-    "public": false
+  "Organization": {
+    "dataSource": "mongo",
+    "public": true
   },
-  "organization": {
-    "dataSource": "shiny",
-    "public": false
-  },
-  "client": {
-    "dataSource": "shiny",
+  "Client": {
+    "dataSource": "mongo",
     "public": true
   }
 }

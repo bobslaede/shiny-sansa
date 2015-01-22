@@ -1,17 +1,32 @@
 {
-  "name": "organization",
+  "name": "Organization",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "ownerId": {
-      "type": "number"
-    },
     "name": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "users": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": ""
+    },
+    "owner": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
   "methods": []
 }

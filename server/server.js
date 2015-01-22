@@ -1,3 +1,4 @@
+
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
@@ -14,6 +15,9 @@ app.start = function() {
     console.log('Web server listening at: %s', app.get('url'));
   });
 };
+
+var path = require('path');  /* REMOVE COMMENTS ON THESE LINES */
+app.use(loopback.static(path.resolve(__dirname, '../client')));
 
 // start the server if `$ node server.js`
 if (require.main === module) {

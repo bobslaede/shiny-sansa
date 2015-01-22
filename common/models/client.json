@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "Client",
   "plural": "clients",
   "base": "PersistedModel",
   "idInjection": true,
@@ -9,7 +9,20 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "organization": {
+      "type": "belongsTo",
+      "model": "organization",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
   "methods": []
 }
