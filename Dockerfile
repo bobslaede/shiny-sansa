@@ -1,1 +1,1 @@
-FROM onestone/iojs
+FROM iojs/iojs
