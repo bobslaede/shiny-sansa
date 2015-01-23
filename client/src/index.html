@@ -4,13 +4,8 @@
   <script src="../bower_components/angular/angular.js"></script>
   <script src="../dist/index.js"></script>
   <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
-  <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
-  <link rel="import" href="../bower_components/core-item/core-item.html">
-  <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
-  <link rel="import" href="../bower_components/core-icons/core-icons.html">
-  <link rel="import" href="../bower_components/core-drawer-panel/core-drawer-panel.html">
-  <link rel="import" href="../bower_components/core-menu/core-menu.html">
-  <link rel="import" href="../bower_components/paper-elements/paper-elements.html">
+  <link rel="import" href="./imports.html">
+
   <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:500,700,400' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8">
   <title></title>
@@ -18,17 +13,14 @@
     body {
       font-family: 'Roboto', 'Noto', sans-serif;
     }
-    core-header-panel {
+    core-scroll-header-panel {
       background: white;
-    }
-    core-drawer-panel:not([narrow]) .header-nav-icon {
-      display: none;
     }
   </style>
 </head>
-<body>
+<body fullbleed>
 
-<core-drawer-panel ng-model="open" ng-init="open = 'main'">
+<core-drawer-panel>
 
   <core-header-panel drawer>
     <core-toolbar id="navheader">
@@ -37,21 +29,30 @@
     <core-menu>
       <core-item label="One"></core-item>
       <core-item label="Two"></core-item>
+      <core-item label="One"></core-item>
+      <core-item label="Two"></core-item>
+      <core-item label="One"></core-item>
+      <core-item label="Two"></core-item>
+      <core-item label="One"></core-item>
+      <core-item label="Two"></core-item>
+      <core-item label="One"></core-item>
+      <core-item label="Two"></core-item>
+      <core-item label="One"></core-item>
+      <core-item label="Two"></core-item>
     </core-menu>
   </core-header-panel>
 
-  <core-header-panel main>
+  <core-scroll-header-panel main>
     <core-toolbar >
       <paper-icon-button
-         icon="menu" class="header-nav-icon"
-        ng-click="open = (open == 'drawer' ? 'main' : 'drawer')"></paper-icon-button>
+         icon="menu" class="header-nav-icon" drawer-panel-toggle></paper-icon-button>
       <span flex>Title</span>
     </core-toolbar>
     <div class="content">
       If drawer is hidden, press button to display drawer.
       {{open}}
     </div>
-  </core-header-panel>
+  </core-scroll-header-panel>
 
 </core-drawer-panel>
 
