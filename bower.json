@@ -1,0 +1,18 @@
+{
+  "name": "shiny-sansa",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bobslaede/shiny-sansa",
+  "authors": [
+    "Jeppe Dyrby <jeppe.dyrby@ebay.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ]
+}
