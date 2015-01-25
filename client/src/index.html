@@ -16,17 +16,31 @@
     core-scroll-header-panel {
       background: white;
     }
+    .content {
+      padding: 20px;
+    }
+
+    core-drawer-panel:not([narrow]) .header-nav-icon {
+      display: none;
+    }
   </style>
 </head>
 <body fullbleed>
 
 <core-drawer-panel>
 
-  <core-header-panel drawer>
+  <core-header-panel>
+
+  </core-header-panel>
+  <core-header-panel drawer mode="waterfall-tall">
     <core-toolbar id="navheader">
       <span>Menu</span>
     </core-toolbar>
     <core-menu>
+      <core-submenu icon="settings" label="Topics">
+        <core-item label="Topic 1"></core-item>
+        <core-item label="Topic 2"></core-item>
+      </core-submenu>
       <core-item label="One"></core-item>
       <core-item label="Two"></core-item>
       <core-item label="One"></core-item>
@@ -42,17 +56,18 @@
     </core-menu>
   </core-header-panel>
 
-  <core-scroll-header-panel main>
+  <core-header-panel main mode="waterfall-tall">
     <core-toolbar >
       <paper-icon-button
-         icon="menu" class="header-nav-icon" drawer-panel-toggle></paper-icon-button>
+         icon="menu" class="header-nav-icon"
+         core-drawer-toggle></paper-icon-button>
       <span flex>Title</span>
     </core-toolbar>
     <div class="content">
       If drawer is hidden, press button to display drawer.
       {{open}}
     </div>
-  </core-scroll-header-panel>
+  </core-header-panel>
 
 </core-drawer-panel>
 

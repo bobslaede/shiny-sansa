@@ -8,7 +8,7 @@ module.exports = function (app) {
   var RoleMapping = app.models.RoleMapping;
   var Organization = app.models.Organization;
 
-  //return;
+  return;
 
 
   User.create([
