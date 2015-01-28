@@ -13,7 +13,7 @@ web:
   ports:
     - "3007:3007"
     - "5959:5858"
-  command: iojs --harmony_arrow_functions --debug server/server.js
+  command: iojs --harmony_arrow_functions server/server.js
   links:
     - db
   environment:

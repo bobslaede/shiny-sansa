@@ -1,9 +1,11 @@
 {
   "execMap": {
+    "js" : "fig restart web"
   },
   "ignore": [
     ".git",
     "node_modules",
-    ".idea"
+    ".idea",
+    "client"
   ]
 }

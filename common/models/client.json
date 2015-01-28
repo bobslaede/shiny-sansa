@@ -1,6 +1,5 @@
 {
   "name": "Client",
-  "plural": "clients",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
