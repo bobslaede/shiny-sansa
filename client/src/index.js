@@ -1,6 +1,6 @@
 "use strict";
 
-import polymer from './polymer';
+import polymer from './shiny/polymer/polymer';
 
 var app = angular.module('app', [
   polymer.name
