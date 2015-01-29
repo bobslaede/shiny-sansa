@@ -2,8 +2,21 @@
 
   <div ng-bind="error"></div>
 
-  <paper-input is="core-input" required type="email" ng-model="user.email"></paper-input>
-  <paper-input is="core-input" required type="password" ng-model="user.password"></paper-input>
+  <paper-input is="core-input"
+               required type="email" ng-model="user.email" label="Email" floatingLabel></paper-input>
+  <paper-input is="core-input"
+               required type="password" ng-model="user.password" label="Password" floatingLabel></paper-input>
+
+
+  <md-input-container>
+    <label>Email</label>
+    <input ng-model="user.email" type="email">
+  </md-input-container>
+
+  <md-input-container>
+    <label>Password</label>
+    <input ng-model="user.password" type="password">
+  </md-input-container>
 
   <paper-button ng-click="loginCtrl.login()">LOGIN</paper-button>
 

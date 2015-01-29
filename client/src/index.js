@@ -5,7 +5,8 @@ import shiny from './shiny/app';
 
 var app = angular.module('app', [
   shiny.name,
-  polymer.name
+  polymer.name,
+  'ngMaterial'
 ])
   .run(function () {
     console.log('run');
