@@ -3,6 +3,7 @@
 <head lang="en">
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
   <script src="dist/loopback.js/lb-services.js"></script>
   <script src="dist/index.js"></script>
   <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
@@ -30,49 +31,7 @@
 </head>
 <body fullbleed>
 
-<core-drawer-panel>
-
-  <core-header-panel>
-
-  </core-header-panel>
-  <core-header-panel drawer mode="waterfall-tall">
-    <core-toolbar id="navheader">
-      <span>Menu</span>
-    </core-toolbar>
-    <core-menu>
-      <core-submenu icon="settings" label="Topics">
-        <core-item label="Topic 1"></core-item>
-        <core-item label="Topic 2"></core-item>
-      </core-submenu>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-    </core-menu>
-  </core-header-panel>
-
-  <core-header-panel main mode="waterfall-tall">
-    <core-toolbar >
-      <paper-icon-button
-        icon="menu" class="header-nav-icon"
-        core-drawer-toggle></paper-icon-button>
-      <span flex>Title</span>
-    </core-toolbar>
-    <div class="content">
-      If drawer is hidden, press button to display drawer.
-      {{open}}
-    </div>
-  </core-header-panel>
-
-</core-drawer-panel>
+  <ui-view></ui-view>
 
 </body>
 </html>

@@ -1,0 +1,10 @@
+<form>
+
+  <div ng-bind="error"></div>
+
+  <paper-input is="core-input" required type="email" ng-model="user.email"></paper-input>
+  <paper-input is="core-input" required type="password" ng-model="user.password"></paper-input>
+
+  <paper-button ng-click="loginCtrl.login()">LOGIN</paper-button>
+
+</form>
