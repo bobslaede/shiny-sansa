@@ -1,12 +1,14 @@
 "use strict";
 
-import polymer from './shiny/polymer/polymer';
+import polymer from './polymer/polymer';
+import shiny from './shiny/app';
 
 var app = angular.module('app', [
+  shiny.name,
   polymer.name
 ])
   .run(function () {
-    console.log('run')
+    console.log('run');
   })
 
 document.addEventListener('polymer-ready', function() {
